@@ -1,0 +1,23 @@
+{
+  "name": "trillo_project",
+  "version": "1.0.0",
+  "description": "Trillo_project_my_code",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "build:css": "node-sass --include-path scss sass/main.scss css/style-comp.css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobertPurc/Trillo_project.git"
+  },
+  "author": "Robert Purc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobertPurc/Trillo_project/issues"
+  },
+  "homepage": "https://github.com/RobertPurc/Trillo_project#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
