@@ -225,7 +225,7 @@
     display: flex;
     // justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
 
 
     &__heading {
@@ -334,5 +334,90 @@
     100% {
         transform: scale(1);
         box-shadow: none;
+    }
+}
+
+////////////////////////// 
+//  paragraphs
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+////////////////////////// 
+//  list
+
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: .7rem;
+    }
+
+    &__item::before {
+        width: 1rem;
+        margin-right: .7rem;
+        content: "";
+        display: inline-block;
+        height: 1rem;
+
+        //older browsers
+        // background-image: url(../img/chevron-thin-right.svg);
+        // background-size: cover;
+
+        //masks
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
+
+    }
+}
+
+////////////////////////// 
+//  recommend
+
+.recommend {
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+    display: flex;
+    align-items: center;
+    // flex-direction: row-reverse;
+
+    &__friends {
+        // display: flex;
+
+        // margin: 0;
+        // margin-left: -1.5rem;
+    }
+
+    &__count {
+        // margin: auto;
+        // align-items: center;
+        margin-left: 2rem;
+        display: flex;
+        order: 1;
+    }
+
+    &__photo {
+        box-sizing: content-box;
+        // order: -1;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+
+        &:not(:last-child) {
+            margin-right: -1.5rem;
+        }
+
     }
 }
