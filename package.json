@@ -4,8 +4,11 @@
   "description": "Trillo_project_my_code",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w",
-    "build:css": "node-sass --include-path scss sass/main.scss css/style-comp.css --output-style compressed"
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed"
+
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,8 @@
   },
   "homepage": "https://github.com/RobertPurc/Trillo_project#readme",
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "autoprefixer": "^9.5.1",
+    "node-sass": "^4.11.0",
+    "postcss-cli": "^6.1.2"
   }
 }
