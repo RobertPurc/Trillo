@@ -14,6 +14,12 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-smallest) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+    }
+
     &__input {
         font-family: inherit;
         font-size: inherit;
@@ -35,6 +41,10 @@
             outline: none;
             width: 100%;
             background-color: var(--color-grey-light-3);
+
+            @media only screen and (max-width: $bp-smallest) {
+                width: 92%
+            }
 
         }
     }
@@ -204,6 +214,14 @@
             justify-content: center;
             // padding: 2rem;
         }
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            // align-self: center;
+            padding: 1rem 0;
+        }
     }
 
 
@@ -215,6 +233,14 @@
         width: 1.75rem;
         height: 1.75rem;
         // z-index: 100;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-bottom: .5rem;
+            margin-right: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+
+        }
     }
 }
 
@@ -260,6 +286,12 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+            padding: 1.25rem 2rem;
+
+        }
     }
 
     &__stars {
@@ -306,17 +338,32 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 0 1.5rem;
+
+        }
     }
 
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -3px;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+
+        }
     }
 
     &__rating-count {
         font-size: .8rem;
         text-transform: uppercase;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: .5rem;
+
+        }
     }
 
 }
