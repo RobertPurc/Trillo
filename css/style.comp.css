@@ -221,6 +221,12 @@ body {
     height: 3.75rem;
     margin-right: 1rem;
     border-radius: 50%; }
+  .user-nav__user-menu {
+    position: absolute;
+    top: 100%; }
+
+.user-menu {
+  list-style-type: none; }
 
 .side-nav {
   margin-top: 3.5rem;
@@ -294,9 +300,31 @@ body {
 
 .gallery {
   display: flex; }
+  .gallery__item {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    color: #fff;
+    font-size: 2rem;
+    transition: transform .3s ease-in-out; }
+  .gallery__item:hover {
+    transform: scale(1.05); }
+  .gallery:hover .gallery__item:not(:hover) {
+    transform: scale(0.95); }
+  .gallery__item:hover .gallery__description {
+    opacity: 1; }
   .gallery__photo {
     width: 100%;
-    display: block; }
+    display: block;
+    transition: transform .3s ease-in; }
+  .gallery__description {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    opacity: 0;
+    transition: all .3s;
+    cursor: default; }
 
 .overview {
   display: flex;
