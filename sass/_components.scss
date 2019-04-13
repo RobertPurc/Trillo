@@ -273,7 +273,7 @@
 
 .gallery {
     display: flex;
-   
+    overflow: hidden;
 
 &__item{
     display: flex;
@@ -282,14 +282,12 @@
     color: #fff;
     font-size: 2rem;
     transition: transform .3s ease-in-out;
+    // overflow: hidden;
    
 }
 &__item:hover{
     transform: scale(1.05);
     
-}
-&__item:hover   &__photo {
-  
 }
 
 &:hover &__item:not(:hover){
@@ -306,7 +304,8 @@
         width: 100%;
         display: block;
         transition: transform .3s ease-in;
-       
+        position: relative;
+        // overflow: hidden;
         
     }
     &__description{
@@ -314,10 +313,12 @@
         text-align: center;
         background-color: rgba(0, 0, 0, .3);
         position: absolute;
+        left:0;
+        bottom: 5%;
         opacity: 0;
         transition:all .3s;
         cursor: default;
-    
+        // overflow: hidden;
     }
 }
 
@@ -760,4 +761,65 @@
 
 
 
+}
+.popup{
+    // max-width: 80vw;
+    // display: none;
+    // width:60vw;
+    // height: 80vh;
+    // position: fixed;
+    // display: flex;
+    // flex-direction: column;
+    // background-color: #fff;
+    // transform: translate(-50%, -50%);
+    // left:50%;
+    // top:50%;
+    // z-index: 20;
+    // background-image: linear-gradient(to right bottom, var(--color-grey-dark-1), #444);
+    // background-color: var(--color-grey-dark-1);
+
+    &__header{
+        // width:100%;
+        // height: 20%;
+       
+        // position: relative;
+        
+    }
+    &__heading{
+        // text-align: center;
+        // position: absolute;
+        // width: 100%;
+        // font-size: 3rem;
+        // padding: 2rem 0;
+        // color:#fff;/
+        // background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light));
+        // transform: translateY(-50%);
+        // top:50%;
+    }
+
+    &__form{
+        // display: flex;
+        // flex-direction: column;
+        // width:100%;
+        // height: 50%;
+        // background-color: #fff;
+        // padding: 5rem 10rem;
+
+    }
+    &__group{
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+    }
+    &__label{
+        // font-size: 3rem;
+        // color: #fff;
+    }
+    &__input{
+        // width: 50%;
+        // height: 100%;
+        // padding: 1.5rem 0;
+        // margin: 1rem 0;
+        // font-size: 2rem;
+    }
 }
